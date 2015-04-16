@@ -15,13 +15,13 @@ CapacitiveSensor   cs_4_12 = CapacitiveSensor(4, 12);
 
 
 void setup(){
-  int sen = 150;
-  
   cs_4_2.set_CS_AutocaL_Millis(0xFFFFFFFF);     // turn off autocalibrate on channel 1 - just as an example
   Serial.begin(9600);
 }
 
-void loop(){
+
+void loop(){  
+   int sen = 150;
   
    long start = millis();
    long total1 =  cs_4_2.capacitiveSensor(30);
